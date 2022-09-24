@@ -6,12 +6,11 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000;
 
-
 const productApiRouter = require('./routes/productsApi');
 
-const loggerFormat = ':method :url :status :response-time ms - :res[content-length]'
-
 app.use(cors());
+
+const loggerFormat = ':method :url :status :response-time ms - :res[content-length]'
 
 app.use(morgan(loggerFormat, {
     skip: function (req, res) {
