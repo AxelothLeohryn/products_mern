@@ -7,7 +7,6 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const productApiRouter = require('./routes/productsApi');
-
 app.use(cors());
 
 const loggerFormat = ':method :url :status :response-time ms - :res[content-length]'
