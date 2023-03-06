@@ -8,7 +8,7 @@ You must have Docker  and docker-compose Installed in your System !
 
 Run the app using:
 
-`$ sudo docker-compose -f docker-compose-dev.yml up `
+`$ docker-compose -f docker-compose-dev.yml up `
 
 or
 

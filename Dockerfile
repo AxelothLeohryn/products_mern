@@ -28,6 +28,7 @@ RUN ls
 WORKDIR /usr/src/app/
 COPY ./package*.json ./
 RUN npm install -qy
+RUN npm run feed_db
 COPY ./ ./
 
 ENV PORT 8080
