@@ -1,6 +1,8 @@
 # Product-MERN-Docker
 
-Application made with ReactJS + ExpressJS + MongoB
+![App](./assets/mern_docker_schema.png)
+
+Application made with ReactJS + ExpressJS + MongoDB
 
 You must have Docker and docker-compose Installed in your System !
 
@@ -55,6 +57,7 @@ To check the status of the running containers :
 
 
 # Execute MERN app
+We can also execute our project without Docker
 
 ## Launch client + server
 ```javascript
@@ -132,4 +135,47 @@ Response:
 "message": "Producto Bocadillo Lomo Queso - Rocafría guardado en el sistema con ID: 632f9a5236a3262c5b1b417a"
 }
 ```
+## Configure MongoDB Atlas 
 
+1. Register in [MongoDB ATLAS](https://www.mongodb.com/cloud)
+
+2. Create a cluster: 
+
+![img](./assets/create_cluster.png)
+
+3. Click on "Browse Collections": 
+
+![img](./assets/browse_collections.png)
+
+
+5. Create a user in MongoDB Atlas for your app
+
+6. Allow access to your cluster from any IP: 
+
+- **Access List Entry:**: 0.0.0.0/0
+- **Comment:** all
+
+![img](./assets/network_access.png)
+
+7. Let's connect to MongoDB Atlas:
+
+Get your URL MongoDB atlas. Click on **Databases** -> **Connect**:
+
+![img](./assets/connect.png)
+
+Choose **"Connect your application"**: 
+
+![img](./assets/connect_your_application.png)
+
+Introduce your `username` y `password`: 
+
+```
+
+mongodb+srv://<username>:<password>@cluster0.t7z6t.mongodb.net/BD?retryWrites=true&w=majority
+
+```
+
+Now you are ready to use your app editing `.env` file with your MongoDB URL
+
+
+![App](./assets/deploy_meme.jpeg)
